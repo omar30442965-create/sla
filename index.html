@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos | Distribuidora Myx Beer</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="titulo">Distribuidora Myx Beer</h1>
+        <p class="subtitulo">🍻 Faça seu pedido e receba cervejas frescas em casa!</p>
+    </header>
+
+    <div class="contenedor-principal">
+        <form method="POST" class="formulario-pedido"> 
+            
+            <h2 class="form-titulo">Detalhes do Seu Pedido</h2>
+            
+            <div class="campo">
+                <label for="nome">Seu Nome Completo:</label>
+                <input type="text" id="nome" name="nome_cliente" placeholder="Ex: João da Silva" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">WhatsApp / Telefone:</label>
+                <input type="tel" id="telefone" name="telefone_contacto" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+            
+            <div class="campo">
+                <label for="produto">Cerveja a Pedir:</label>
+                <select id="produto" name="produto_solicitado" required>
+                    <option value="" disabled selected>Selecione a Cerveja</option>
+                    <option value="lager">Lager Clássica (Caixa c/ 12)</option>
+                    <option value="ipa">IPA Artesanal (Caixa c/ 6)</option>
+                    <option value="pilsen">Pilsen Premium (Caixa c/ 24)</option>
+                    <option value="stout">Stout Escura (Caixa c/ 4)</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="quantidade">Quantidade (Caixas):</label>
+                <input type="number" id="quantidade" name="quantidade_solicitada" min="1" value="1" required>
+            </div>
+
+            <div class="campo campo-mensaje">
+                <label for="notas">Instruções ou Notas Adicionais:</label>
+                <textarea id="notas" name="notas_pedido" rows="4" placeholder="Ex: Entregar após as 18h, deixar com o vizinho, etc."></textarea>
+            </div>
+
+            <button type="submit" class="boton-enviar">
+                Confirmar e Enviar Pedido 🚀
+            </button>
+        </form>
+    </div>
+    
+    <script src="app.js"></script> 
+
+</body>
+</html>
